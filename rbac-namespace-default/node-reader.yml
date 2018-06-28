@@ -35,3 +35,6 @@ subjects:
 - kind: ServiceAccount
   name: default
   namespace: kafka
+- kind: ServiceAccount
+  name: default
+  namespace: kafka-production

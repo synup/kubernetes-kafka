@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: kafka
-  namespace: kafka
+  namespace: kafka-production
 spec:
   selector:
     matchLabels:
@@ -85,4 +85,4 @@ spec:
       storageClassName: kafka-broker
       resources:
         requests:
-          storage: 200Gi
+          storage: 400Gi
