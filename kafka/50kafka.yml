@@ -44,6 +44,8 @@ spec:
       - name: broker
         image: solsson/kafka:1.0.1@sha256:1a4689d49d6274ac59b9b740f51b0408e1c90a9b66d16ad114ee9f7193bab111
         env:
+        - name: "KAFKA_HEAP_OPTS"
+          value: "-Xmx6G -Xms6G"
         - name: KAFKA_LOG4J_OPTS
           value: -Dlog4j.configuration=file:/etc/kafka/log4j.properties
         - name: JMX_PORT
@@ -60,8 +62,10 @@ spec:
         - /etc/kafka/server.properties
         resources:
           requests:
-            cpu: 100m
-            memory: 512Mi
+            cpu: 1
+            memory: 12Gi
+          limits:
+            memory: 15Gi
         readinessProbe:
           tcpSocket:
             port: 9092
@@ -77,6 +81,13 @@ spec:
           name: broker-config
       - name: config
         emptyDir: {}
+      nodeSelector:
+        beta.kubernetes.io/instance-type: "r4.large"
+      tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "memory"
+        effect: "NoSchedule"
   volumeClaimTemplates:
   - metadata:
       name: data
