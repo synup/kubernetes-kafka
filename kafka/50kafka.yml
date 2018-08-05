@@ -82,7 +82,7 @@ spec:
       - name: config
         emptyDir: {}
       nodeSelector:
-        beta.kubernetes.io/instance-type: "r4.large"
+          k8s.synup.com/instancegroup: "memory-nodes"
       tolerations:
       - key: "dedicated"
         operator: "Equal"
