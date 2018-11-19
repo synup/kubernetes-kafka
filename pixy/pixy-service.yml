@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: pixy
-  namespace: kafka
+  namespace: kafka-staging
 spec:
   selector:
     app: pixy
