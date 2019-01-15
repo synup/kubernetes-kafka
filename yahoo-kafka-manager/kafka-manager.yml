@@ -2,7 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: kafka-manager
-  namespace: kafka-apisandbox
+  namespace: kafka-uatsandbox
 spec:
   replicas: 1
   selector:
@@ -20,7 +20,7 @@ spec:
         - containerPort: 80
         env:
         - name: ZK_HOSTS
-          value: zookeeper.kafka-apisandbox.svc.cluster.local:2181
+          value: zookeeper.kafka-uatsandbox.svc.cluster.local:2181
         command:
         - ./bin/kafka-manager
         - -Dhttp.port=80

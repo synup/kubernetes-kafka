@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: kafka-manager
-  namespace: kafka-apisandbox
+  namespace: kafka-uatsandbox
 spec:
   selector:
     app: kafka-manager

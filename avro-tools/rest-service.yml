@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: avro-rest
-  namespace: kafka-apisandbox
+  namespace: kafka-uatsandbox
 spec:
   ports:
   - port: 80

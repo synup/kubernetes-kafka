@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: outside-0
-  namespace: kafka-apisandbox
+  namespace: kafka-uatsandbox
 spec:
   selector:
     app: kafka
@@ -10,6 +10,6 @@ spec:
   ports:
   - protocol: TCP
     targetPort: 9094
-    port: 32410
-    nodePort: 32410
+    port: 32420
+    nodePort: 32420
   type: NodePort
