@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: reassign-partitions
-  namespace: kafka-staging
+  namespace: kafka-apisandbox
 spec:
   template:
     metadata:

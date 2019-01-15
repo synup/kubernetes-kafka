@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: zookeeper
-  namespace: kafka-staging
+  namespace: kafka-apisandbox
 spec:
   ports:
   - port: 2181
