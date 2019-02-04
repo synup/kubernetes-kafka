@@ -4,7 +4,7 @@ apiVersion: apps/v1beta2
 kind: StatefulSet
 metadata:
   name: kafka
-  namespace: kafka-uatsandbox
+  namespace: kafka-demosandbox
 spec:
   template:
     metadata:
