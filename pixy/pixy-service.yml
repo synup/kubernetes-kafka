@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: pixy
-  namespace: kafka-qasandbox
+  namespace: kafka-tstsandbox
 spec:
   selector:
     app: pixy

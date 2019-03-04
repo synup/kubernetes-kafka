@@ -24,7 +24,7 @@ rules:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: kafka-qasandbox-node-reader
+  name: kafka-tstsandbox-node-reader
   labels:
     origin: github.com_Yolean_kubernetes-kafka
 roleRef:
@@ -34,4 +34,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: kafka-qasandbox
+  namespace: kafka-tstsandbox

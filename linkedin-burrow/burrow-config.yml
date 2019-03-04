@@ -1,7 +1,7 @@
 kind: ConfigMap
 metadata:
   name: burrow-config
-  namespace: kafka-qasandbox
+  namespace: kafka-tstsandbox
 apiVersion: v1
 data:
   burrow.toml: |-
