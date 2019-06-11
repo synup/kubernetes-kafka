@@ -2,7 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: avro-rest
-  namespace: kafka-qasandbox
+  namespace: kafka-staging
 spec:
   replicas: 1
   selector:

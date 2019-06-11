@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: outside-1
-  namespace: kafka-qasandbox
+  namespace: kafka-staging
 spec:
   selector:
     app: kafka

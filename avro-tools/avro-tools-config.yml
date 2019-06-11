@@ -1,7 +1,7 @@
 kind: ConfigMap
 metadata:
   name: avro-tools-config
-  namespace: kafka-qasandbox
+  namespace: kafka-staging
 apiVersion: v1
 data:
   schema-registry.properties: |-
